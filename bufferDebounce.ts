@@ -1,5 +1,6 @@
 import * as RxJS from "rxjs";
 import * as RxJSOperators from "rxjs/operators";
+import { prioritize } from "rxjs-etc/operators";
 
 // Buffer the values and emit only after a particular time span has passed without another source
 // emission.
@@ -11,9 +12,9 @@ export const bufferDebounce = (ms: number) => <T>(
   // The observable will have multiple subscribers, because it is used by both `buffer` and
   // `debounceTime`. We want to share the execution.
   source.pipe(
-    RxJSOperators.publish((published) =>
-      published.pipe(
-        RxJSOperators.buffer(published.pipe(RxJSOperators.debounceTime(ms)))
+    prioritize((first, second) =>
+      second.pipe(
+        RxJSOperators.buffer(first.pipe(RxJSOperators.debounceTime(ms)))
       )
     )
   );

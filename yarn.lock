@@ -2444,6 +2444,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+memoize-resolver@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/memoize-resolver/-/memoize-resolver-1.0.0.tgz#93f01b61909008eb9d9b521fc1db152cc1b47f06"
+  integrity sha512-mXfNXte0RSWl0rEIsQhXutfM2R2Oa7UyKDD7XoZMEbKeucTRms04y5y41U8gLqPzRx7ViN/QyYnTR2TX/5tawA==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
@@ -2965,6 +2970,14 @@ rsvp@^4.8.4:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
 
+rxjs-etc@^10.5.2:
+  version "10.5.2"
+  resolved "https://registry.yarnpkg.com/rxjs-etc/-/rxjs-etc-10.5.2.tgz#e1ca767c6e6a9abf1a64714ef52ea0a1cf5b65e1"
+  integrity sha512-z1fwcPQjBvw5myzQo3gcwkyyu3Du5oUMktrvl8upE6qqYBB4p1S2xVO2AOCL7jENh/lNSQfmJ6CYQT2mJU8/Fw==
+  dependencies:
+    memoize-resolver "~1.0.0"
+    rxjs-report-usage "~1.0.4"
+
 rxjs-marbles@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/rxjs-marbles/-/rxjs-marbles-6.0.1.tgz#aef219bd51e1e65caf811c267a05f729e04a1c8e"
@@ -2973,7 +2986,7 @@ rxjs-marbles@^6.0.1:
     fast-equals "^2.0.0"
     rxjs-report-usage "^1.0.4"
 
-rxjs-report-usage@^1.0.4:
+rxjs-report-usage@^1.0.4, rxjs-report-usage@~1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/rxjs-report-usage/-/rxjs-report-usage-1.0.5.tgz#8de220b385f3f65a163e75cfcc2566b1545c9b3d"
   integrity sha512-jZeg+TTkvP8kAv0tIQj3WOuIhYLi+Ig9mG8DCc+nJHQ1ObJr8IaeNPbJmXDRfHvH3MKQMBzboY4RbQ6jWt6cIg==
@@ -2986,10 +2999,10 @@ rxjs-report-usage@^1.0.4:
     glob "~7.1.6"
     prompts "~2.3.2"
 
-rxjs@^7.0.0-beta.10:
-  version "7.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.0.0-beta.10.tgz#fb9f74bba5154701924209b576643cc9d94b3e53"
-  integrity sha512-iK8B6ACjMn00gObHQYoIyXouyD0cPmzuXFxfYi/i9jBVFQHsjjPt5T51sRDsXJ9Utg4Q7R1m7QiLtuQEQ3r73g==
+rxjs@7.0.0-beta.4:
+  version "7.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.0.0-beta.4.tgz#bca2bea86cf2074b56f37db202f978ae296c7517"
+  integrity sha512-VpZJjT9GLSTmQIYC9s1nsAYjJONg7UeSpLFd88uQJpw0VPyobs/2EwK2iTAMGeiLxJWj7BW66BcjeNA1hWbygQ==
   dependencies:
     tslib "^1.9.0"
 
