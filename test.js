@@ -22,15 +22,15 @@ describe("bufferDebounce", () => {
   it(
     "works with 0 timeout",
     marbles((m) => {
-      const source$ = m.cold("--(ab)--c--d");
+      const source$ = m.cold("--(ab)--c--(de|)");
       const ms = m.time("       |");
-      const expected = "      --1-----2--3";
+      const expected = "      --1-----2--(3|)";
 
       const actual$ = source$.pipe(bufferDebounce(ms));
       m.expect(actual$).toBeObservable(expected, {
         1: ["a", "b"],
         2: ["c"],
-        3: ["d"],
+        3: ["d", "e"],
       });
     })
   );
